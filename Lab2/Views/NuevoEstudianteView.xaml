@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="NuevoEstudianteView"
+             
+             x:Class="Lab2.Views.NuevoEstudianteView">
+
+    <StackLayout>
+
+        <Image Source="PersonaContactoInfo" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" BackgroundColor="Teal">
+            <Label Text="ID: " FontSize="12"/>
+            <Entry Text="{Binding EstudianteActual.ID}" FontSize="12"/>
+        </StackLayout>
+        
+        <StackLayout HorizontalOptions="CenterAndExpand" BackgroundColor="Red">
+            <Label Text="Nombre: " FontSize="12"/>
+            <Entry Text="{Binding EstudianteActual.Nombre}" FontSize="12"/>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" BackgroundColor="Purple">
+            <Label Text="Nota: " FontSize="12"/>
+            <Entry Text="{Binding EstudianteActual.Nota}" FontSize="12"/>
+        </StackLayout>
+
+        <Button Text="Aceptar" Command="{Binding AgregarEstudianteCommand}"/>
+ 
+    </StackLayout>
+
+    
+</ContentPage>
